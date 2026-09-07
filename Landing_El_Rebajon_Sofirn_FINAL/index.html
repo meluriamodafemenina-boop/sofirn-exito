@@ -15,17 +15,12 @@
   --black:#080808;
   --card:#121212;
   --white:#fff;
-  --muted:#bdbdbd;
   --line:#292929;
 }
 
-*{
-  box-sizing:border-box
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
@@ -170,14 +165,6 @@ h1{
   box-shadow:0 10px 25px rgba(255,106,0,.22)
 }
 
-.btn.alt{
-  background:#1b1b1b;
-  color:white;
-  border:1px solid #444;
-  box-shadow:none;
-  margin-top:10px
-}
-
 .trust{
   display:flex;
   flex-wrap:wrap;
@@ -237,8 +224,6 @@ h1{
   color:#aaa;
   margin:0
 }
-
-/* GALERÍA */
 
 .gallery{
   display:grid;
@@ -328,8 +313,7 @@ h1{
 }
 
 .field input,
-.field select,
-.field textarea{
+.field select{
   width:100%;
   padding:14px;
   border-radius:10px;
@@ -341,8 +325,7 @@ h1{
 }
 
 .field input:focus,
-.field select:focus,
-.field textarea:focus{
+.field select:focus{
   border-color:var(--orange)
 }
 
@@ -364,7 +347,19 @@ h1{
   color:#d9ffe0;
   border-radius:12px;
   padding:13px;
-  margin-bottom:15px
+  margin-bottom:15px;
+  text-align:center
+}
+
+.error{
+  display:none;
+  background:#3a1111;
+  border:1px solid #8d3030;
+  color:#ffdede;
+  border-radius:12px;
+  padding:13px;
+  margin-bottom:15px;
+  text-align:center
 }
 
 .faq{
@@ -399,19 +394,6 @@ footer{
   font-size:13px
 }
 
-.float{
-  position:fixed;
-  right:16px;
-  bottom:16px;
-  z-index:30;
-  background:#20c76a;
-  color:#06150c;
-  border-radius:999px;
-  padding:14px 18px;
-  font-weight:1000;
-  box-shadow:0 12px 30px rgba(0,0,0,.5)
-}
-
 .bottom{
   display:none;
   position:fixed;
@@ -427,8 +409,6 @@ footer{
 .bottom .btn{
   padding:13px
 }
-
-/* TABLET */
 
 @media(max-width:800px){
 
@@ -453,27 +433,17 @@ footer{
     font-size:13px
   }
 
-  .float{
-    bottom:70px
-  }
-
   .bottom{
     display:block
   }
-
 }
-
-/* CELULAR */
 
 @media(max-width:700px){
 
   .gallery{
     grid-template-columns:1fr
   }
-
 }
-
-/* CELULAR PEQUEÑO */
 
 @media(max-width:500px){
 
@@ -497,21 +467,15 @@ footer{
   .time b{
     font-size:22px
   }
-
 }
 </style>
 </head>
 
 <body>
 
-<!-- BARRA SUPERIOR -->
-
 <div class="top">
 🔥 PROMOCIÓN DE ESTA SEMANA · PRECIO ESPECIAL POR 5 DÍAS · 🚚 ENVÍOS A TODA COLOMBIA
 </div>
-
-
-<!-- NAVEGACIÓN -->
 
 <nav>
 <div class="wrap navin">
@@ -527,10 +491,7 @@ PEDIR AHORA
 </div>
 </nav>
 
-
 <main>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -546,7 +507,6 @@ alt="Linterna Sofirn SD06 El Rebajón"
 
 </div>
 
-
 <div>
 
 <div class="kicker">
@@ -560,7 +520,6 @@ Ilumina cuando más lo necesitas.
 <p class="lead">
 Linterna táctica Sofirn SD06 para camping, senderismo, emergencias, vigilancia, hogar y mucho más.
 </p>
-
 
 <div class="pricebox">
 
@@ -578,19 +537,9 @@ $89.900
 
 </div>
 
-
 <a class="btn" href="#pedido">
 🛒 QUIERO MI LINTERNA POR $89.900
 </a>
-
-<a
-class="btn alt"
-href="#"
-onclick="goWhatsApp();return false;"
->
-💬 PEDIR POR WHATSAPP
-</a>
-
 
 <div class="trust">
 
@@ -614,9 +563,6 @@ onclick="goWhatsApp();return false;"
 
 </section>
 
-
-<!-- BENEFICIOS -->
-
 <section class="section">
 
 <div class="wrap">
@@ -629,7 +575,6 @@ onclick="goWhatsApp();return false;"
 Una linterna pensada para tener iluminación confiable cuando realmente la necesitas.
 </p>
 
-
 <div class="features">
 
 <div class="feature">
@@ -640,7 +585,6 @@ Alta potencia de iluminación según las especificaciones del producto suministr
 </p>
 </div>
 
-
 <div class="feature">
 <div class="ico">🎯</div>
 <h3>Hasta 470 metros</h3>
@@ -648,7 +592,6 @@ Alta potencia de iluminación según las especificaciones del producto suministr
 Gran alcance para exteriores, recorridos y situaciones de baja iluminación.
 </p>
 </div>
-
 
 <div class="feature">
 <div class="ico">💧</div>
@@ -658,7 +601,6 @@ Diseñada para acompañarte en diferentes condiciones de uso.
 </p>
 </div>
 
-
 <div class="feature">
 <div class="ico">🛡️</div>
 <h3>Resistente y confiable</h3>
@@ -667,7 +609,6 @@ Construcción robusta para uso cotidiano y actividades al aire libre.
 </p>
 </div>
 
-
 <div class="feature">
 <div class="ico">🎒</div>
 <h3>Compacta y ligera</h3>
@@ -675,7 +616,6 @@ Construcción robusta para uso cotidiano y actividades al aire libre.
 Fácil de transportar y tener a mano en casa, carro o mochila.
 </p>
 </div>
-
 
 <div class="feature">
 <div class="ico">⚡</div>
@@ -690,9 +630,6 @@ Adaptable a diferentes necesidades de iluminación.
 </div>
 
 </section>
-
-
-<!-- GALERÍA DE IMÁGENES -->
 
 <section class="section">
 
@@ -721,7 +658,6 @@ Linterna Sofirn SD06 y accesorios.
 
 </div>
 
-
 <div>
 
 <img
@@ -740,7 +676,6 @@ Presentación Sofirn SD06 y accesorios incluidos.
 </div>
 
 </section>
-<!-- PROMOCIÓN -->
 
 <section class="section">
 
@@ -757,7 +692,6 @@ Aprovecha el precio especial de
 <strong>$89.900</strong>
 antes de que termine la promoción de esta semana.
 </p>
-
 
 <div class="timer">
 
@@ -783,7 +717,6 @@ antes de que termine la promoción de esta semana.
 
 </div>
 
-
 <a class="btn" href="#pedido">
 🔥 APROVECHAR LA PROMOCIÓN
 </a>
@@ -794,9 +727,6 @@ antes de que termine la promoción de esta semana.
 
 </section>
 
-
-<!-- FORMULARIO -->
-
 <section class="section" id="pedido">
 
 <div class="wrap">
@@ -806,21 +736,22 @@ antes de que termine la promoción de esta semana.
 </h2>
 
 <p class="sub">
-Completa tus datos. Al enviar, se abrirá WhatsApp con la información de tu pedido para confirmar el despacho.
+Completa tus datos y envía tu pedido directamente. La información quedará registrada para gestionar el despacho.
 </p>
-
 
 <div class="formcard">
 
 <div id="success" class="success">
-✅ Datos preparados. Abriendo WhatsApp para confirmar tu pedido...
+✅ ¡Pedido registrado correctamente! Hemos recibido tus datos.
 </div>
 
+<div id="error" class="error">
+❌ No pudimos registrar el pedido. Por favor intenta nuevamente.
+</div>
 
 <form id="orderForm">
 
 <div class="formgrid">
-
 
 <div class="field">
 
@@ -836,7 +767,6 @@ placeholder="Ej. Juan Pérez"
 >
 
 </div>
-
 
 <div class="field">
 
@@ -854,7 +784,6 @@ placeholder="Ej. 3001234567"
 
 </div>
 
-
 <div class="field">
 
 <label>
@@ -868,7 +797,6 @@ placeholder="Ej. Antioquia"
 >
 
 </div>
-
 
 <div class="field">
 
@@ -885,7 +813,6 @@ placeholder="Ej. Medellín"
 
 </div>
 
-
 <div class="field full">
 
 <label>
@@ -900,7 +827,6 @@ placeholder="Calle, carrera, número, barrio, casa/apto"
 >
 
 </div>
-
 
 <div class="field">
 
@@ -926,7 +852,6 @@ Cantidad *
 
 </div>
 
-
 <div class="field">
 
 <label>
@@ -940,17 +865,14 @@ disabled
 
 </div>
 
-
 </div>
 
-
-<button class="btn" type="submit">
+<button id="submitBtn" class="btn" type="submit">
 🚚 CONFIRMAR MI PEDIDO
 </button>
 
-
 <p class="note">
-Al continuar aceptas que El Rebajón use estos datos para gestionar y confirmar tu pedido. El pedido queda sujeto a confirmación por WhatsApp.
+Al enviar el formulario autorizas a El Rebajón a utilizar estos datos exclusivamente para gestionar y despachar tu pedido.
 </p>
 
 </form>
@@ -960,9 +882,6 @@ Al continuar aceptas que El Rebajón use estos datos para gestionar y confirmar 
 </div>
 
 </section>
-
-
-<!-- PAGO CONTRA ENTREGA -->
 
 <section class="section">
 
@@ -976,7 +895,6 @@ Perfecta para múltiples situaciones
 Camping · vigilancia · senderismo · emergencias · hogar · carro
 </p>
 
-
 <div class="offer">
 
 <h3>
@@ -986,7 +904,6 @@ Camping · vigilancia · senderismo · emergencias · hogar · carro
 <p style="color:#aaa">
 Realiza tu pedido y paga al recibirlo, según cobertura y condiciones de la transportadora.
 </p>
-
 
 <a class="btn" href="#pedido">
 QUIERO HACER MI PEDIDO
@@ -998,9 +915,6 @@ QUIERO HACER MI PEDIDO
 
 </section>
 
-
-<!-- PREGUNTAS FRECUENTES -->
-
 <section class="section">
 
 <div class="wrap">
@@ -1009,9 +923,7 @@ QUIERO HACER MI PEDIDO
 Preguntas frecuentes
 </h2>
 
-
 <div class="faq">
-
 
 <details>
 
@@ -1025,7 +937,6 @@ La oferta publicada en esta landing es de $89.900, frente a un precio anterior d
 
 </details>
 
-
 <details>
 
 <summary>
@@ -1037,7 +948,6 @@ Sí. La modalidad de pago indicada para esta oferta es contra entrega, sujeta a 
 </p>
 
 </details>
-
 
 <details>
 
@@ -1051,7 +961,6 @@ La oferta está anunciada para envíos a toda Colombia. La cobertura y condicion
 
 </details>
 
-
 <details>
 
 <summary>
@@ -1059,11 +968,10 @@ La oferta está anunciada para envíos a toda Colombia. La cobertura y condicion
 </summary>
 
 <p>
-Diligencia el formulario y se abrirá WhatsApp con tus datos para que El Rebajón pueda confirmar el pedido y coordinar el despacho.
+Diligencia el formulario y tu pedido quedará registrado directamente para su gestión.
 </p>
 
 </details>
-
 
 <details>
 
@@ -1077,7 +985,6 @@ La promoción está configurada para finalizar el viernes 11 de septiembre de 20
 
 </details>
 
-
 </div>
 
 </div>
@@ -1085,9 +992,6 @@ La promoción está configurada para finalizar el viernes 11 de septiembre de 20
 </section>
 
 </main>
-
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1099,20 +1003,6 @@ La promoción está configurada para finalizar el viernes 11 de septiembre de 20
 
 </footer>
 
-
-<!-- WHATSAPP FLOTANTE -->
-
-<a
-class="float"
-href="#"
-onclick="goWhatsApp();return false;"
->
-💬 WhatsApp
-</a>
-
-
-<!-- BOTÓN FIJO CELULAR -->
-
 <div class="bottom">
 
 <a class="btn" href="#pedido">
@@ -1121,15 +1011,34 @@ onclick="goWhatsApp();return false;"
 
 </div>
 
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
 
 /* =====================================================
-   CONFIGURACIÓN
+   CONEXIÓN CON SUPABASE
+===================================================== */
+
+const SUPABASE_URL =
+"https://girfmsczqxynfgrhhhxn.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_UHKo5A7lWNO8SqEuMimSgg_aS7cnfG-";
+
+const supabaseClient =
+window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+
+/* =====================================================
+   CONFIGURACIÓN DEL PRODUCTO
 ===================================================== */
 
 const CONFIG = {
-  WHATSAPP_NUMBER: "573147636825",
   PRODUCT: "Linterna Sofirn SD06",
   PRICE: 89900
 };
@@ -1142,10 +1051,10 @@ const CONFIG = {
 function money(n){
 
   return new Intl.NumberFormat(
-    'es-CO',
+    "es-CO",
     {
-      style:'currency',
-      currency:'COP',
+      style:"currency",
+      currency:"COP",
       maximumFractionDigits:0
     }
   ).format(n);
@@ -1154,143 +1063,214 @@ function money(n){
 
 
 /* =====================================================
-   WHATSAPP DIRECTO
-===================================================== */
-
-function goWhatsApp(){
-
-  const text =
-`Hola 👋 Quiero aprovechar la promoción de la ${CONFIG.PRODUCT} por ${money(CONFIG.PRICE)} con pago contra entrega.
-
-Quiero hacer mi pedido.`;
-
-  window.open(
-    `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
-    '_blank'
-  );
-
-}
-
-
-/* =====================================================
-   FORMULARIO DE PEDIDO
+   FORMULARIO
 ===================================================== */
 
 document
-.getElementById('orderForm')
-.addEventListener('submit',function(e){
+.getElementById("orderForm")
+.addEventListener("submit", async function(e){
 
   e.preventDefault();
 
+  const button =
+    document.getElementById("submitBtn");
+
+  const success =
+    document.getElementById("success");
+
+  const error =
+    document.getElementById("error");
+
+
+  success.style.display = "none";
+  error.style.display = "none";
+
 
   const name =
-    document.getElementById('name').value.trim();
+    document.getElementById("name").value.trim();
 
   const phone =
-    document.getElementById('phone').value.trim();
+    document.getElementById("phone").value.trim();
 
   const dept =
-    document.getElementById('dept').value.trim();
+    document.getElementById("dept").value.trim();
 
   const city =
-    document.getElementById('city').value.trim();
+    document.getElementById("city").value.trim();
 
   const address =
-    document.getElementById('address').value.trim();
+    document.getElementById("address").value.trim();
 
   const qty =
-    Number(document.getElementById('qty').value);
+    Number(document.getElementById("qty").value);
 
 
   const total =
     CONFIG.PRICE * qty;
 
 
-  const text =
-`Hola 👋 Quiero confirmar un pedido en El Rebajón.
+  button.disabled = true;
 
-Producto: ${CONFIG.PRODUCT}
-Cantidad: ${qty}
-Total: ${money(total)}
-Pago: Contra entrega
-
-Nombre: ${name}
-Celular: ${phone}
-Departamento: ${dept}
-Ciudad: ${city}
-Dirección: ${address}`;
+  button.textContent =
+    "⏳ REGISTRANDO PEDIDO...";
 
 
-  document
-    .getElementById('success')
-    .style.display='block';
+  try{
+
+    const { data, error: dbError } =
+      await supabaseClient
+      .from("pedidos")
+      .insert([
+        {
+          nombre: name,
+          celular: phone,
+          departamento: dept,
+          ciudad: city,
+          direccion: address,
+          producto: CONFIG.PRODUCT,
+          cantidad: qty,
+          precio_unitario: CONFIG.PRICE,
+          total: total,
+          metodo_pago: "Pago contra entrega",
+          estado: "Pendiente"
+        }
+      ])
+      .select();
 
 
-  window.open(
-    `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
-    '_blank'
-  );
+    if(dbError){
+
+      console.error(dbError);
+
+      throw dbError;
+
+    }
+
+
+    success.style.display = "block";
+
+    success.innerHTML =
+      "✅ <strong>¡Pedido registrado correctamente!</strong><br>" +
+      "Tu pedido de " +
+      qty +
+      " unidad(es) por " +
+      money(total) +
+      " quedó registrado.";
+
+
+    document
+      .getElementById("orderForm")
+      .reset();
+
+
+    success.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+
+  }catch(err){
+
+    console.error(err);
+
+    error.style.display = "block";
+
+    error.innerHTML =
+      "❌ <strong>No pudimos registrar el pedido.</strong><br>" +
+      "Por favor verifica los datos e intenta nuevamente.";
+
+
+  }finally{
+
+    button.disabled = false;
+
+    button.textContent =
+      "🚚 CONFIRMAR MI PEDIDO";
+
+  }
 
 });
 
 
 /* =====================================================
    CONTADOR DE PROMOCIÓN
-   VIERNES 11 DE SEPTIEMBRE DE 2026
-   11:59 PM - HORA COLOMBIA
 ===================================================== */
 
 const end =
-  new Date("2026-09-11T23:59:59-05:00").getTime();
+  new Date(
+    "2026-09-11T23:59:59-05:00"
+  ).getTime();
 
 
 function tick(){
 
   let d =
-    Math.max(0,end-Date.now());
+    Math.max(
+      0,
+      end - Date.now()
+    );
 
 
-  let days =
-    Math.floor(d/86400000);
+  const days =
+    Math.floor(
+      d / 86400000
+    );
 
   d %= 86400000;
 
 
-  let hours =
-    Math.floor(d/3600000);
+  const hours =
+    Math.floor(
+      d / 3600000
+    );
 
   d %= 3600000;
 
 
-  let mins =
-    Math.floor(d/60000);
+  const mins =
+    Math.floor(
+      d / 60000
+    );
 
 
-  let secs =
-    Math.floor((d%60000)/1000);
+  const secs =
+    Math.floor(
+      (d % 60000) / 1000
+    );
 
 
-  document.getElementById('days').textContent =
-    String(days).padStart(2,'0');
+  document
+    .getElementById("days")
+    .textContent =
+      String(days).padStart(2,"0");
 
 
-  document.getElementById('hours').textContent =
-    String(hours).padStart(2,'0');
+  document
+    .getElementById("hours")
+    .textContent =
+      String(hours).padStart(2,"0");
 
 
-  document.getElementById('mins').textContent =
-    String(mins).padStart(2,'0');
+  document
+    .getElementById("mins")
+    .textContent =
+      String(mins).padStart(2,"0");
 
 
-  document.getElementById('secs').textContent =
-    String(secs).padStart(2,'0');
+  document
+    .getElementById("secs")
+    .textContent =
+      String(secs).padStart(2,"0");
 
 }
 
 
 tick();
 
-setInterval(tick,1000);
+setInterval(
+  tick,
+  1000
+);
 
 </script>
 
