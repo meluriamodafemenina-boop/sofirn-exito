@@ -165,6 +165,11 @@ h1{
   box-shadow:0 10px 25px rgba(255,106,0,.22)
 }
 
+.btn:disabled{
+  opacity:.65;
+  cursor:not-allowed
+}
+
 .trust{
   display:flex;
   flex-wrap:wrap;
@@ -563,6 +568,7 @@ $89.900
 
 </section>
 
+
 <section class="section">
 
 <div class="wrap">
@@ -631,6 +637,7 @@ Adaptable a diferentes necesidades de iluminación.
 
 </section>
 
+
 <section class="section">
 
 <div class="wrap">
@@ -676,6 +683,7 @@ Presentación Sofirn SD06 y accesorios incluidos.
 </div>
 
 </section>
+
 
 <section class="section">
 
@@ -727,6 +735,7 @@ antes de que termine la promoción de esta semana.
 
 </section>
 
+
 <section class="section" id="pedido">
 
 <div class="wrap">
@@ -746,7 +755,7 @@ Completa tus datos y envía tu pedido directamente. La información quedará reg
 </div>
 
 <div id="error" class="error">
-❌ No pudimos registrar el pedido. Por favor intenta nuevamente.
+❌ No pudimos registrar el pedido.
 </div>
 
 <form id="orderForm">
@@ -768,6 +777,7 @@ placeholder="Ej. Juan Pérez"
 
 </div>
 
+
 <div class="field">
 
 <label>
@@ -784,6 +794,7 @@ placeholder="Ej. 3001234567"
 
 </div>
 
+
 <div class="field">
 
 <label>
@@ -797,6 +808,7 @@ placeholder="Ej. Antioquia"
 >
 
 </div>
+
 
 <div class="field">
 
@@ -813,6 +825,7 @@ placeholder="Ej. Medellín"
 
 </div>
 
+
 <div class="field full">
 
 <label>
@@ -827,6 +840,7 @@ placeholder="Calle, carrera, número, barrio, casa/apto"
 >
 
 </div>
+
 
 <div class="field">
 
@@ -852,6 +866,7 @@ Cantidad *
 
 </div>
 
+
 <div class="field">
 
 <label>
@@ -866,6 +881,7 @@ disabled
 </div>
 
 </div>
+
 
 <button id="submitBtn" class="btn" type="submit">
 🚚 CONFIRMAR MI PEDIDO
@@ -882,6 +898,7 @@ Al enviar el formulario autorizas a El Rebajón a utilizar estos datos exclusiva
 </div>
 
 </section>
+
 
 <section class="section">
 
@@ -915,6 +932,7 @@ QUIERO HACER MI PEDIDO
 
 </section>
 
+
 <section class="section">
 
 <div class="wrap">
@@ -937,6 +955,7 @@ La oferta publicada en esta landing es de $89.900, frente a un precio anterior d
 
 </details>
 
+
 <details>
 
 <summary>
@@ -948,6 +967,7 @@ Sí. La modalidad de pago indicada para esta oferta es contra entrega, sujeta a 
 </p>
 
 </details>
+
 
 <details>
 
@@ -961,6 +981,7 @@ La oferta está anunciada para envíos a toda Colombia. La cobertura y condicion
 
 </details>
 
+
 <details>
 
 <summary>
@@ -972,6 +993,7 @@ Diligencia el formulario y tu pedido quedará registrado directamente para su ge
 </p>
 
 </details>
+
 
 <details>
 
@@ -993,6 +1015,7 @@ La promoción está configurada para finalizar el viernes 11 de septiembre de 20
 
 </main>
 
+
 <footer>
 
 <div class="wrap">
@@ -1003,6 +1026,7 @@ La promoción está configurada para finalizar el viernes 11 de septiembre de 20
 
 </footer>
 
+
 <div class="bottom">
 
 <a class="btn" href="#pedido">
@@ -1011,7 +1035,10 @@ La promoción está configurada para finalizar el viernes 11 de septiembre de 20
 
 </div>
 
-<!-- SUPABASE -->
+
+<!-- =====================================================
+     SUPABASE
+===================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -1138,14 +1165,43 @@ document
       .select();
 
 
+    /* =================================================
+       MOSTRAR EL ERROR REAL DE SUPABASE
+    ================================================= */
+
     if(dbError){
 
-      console.error(dbError);
+      console.error(
+        "ERROR SUPABASE:",
+        dbError
+      );
 
-      throw dbError;
+      error.style.display = "block";
+
+      error.innerHTML =
+        "❌ <strong>Error de Supabase:</strong><br><br>" +
+        dbError.message +
+        "<br><br>" +
+        "<small>Revisa la configuración de la tabla 'pedidos'.</small>";
+
+      error.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+      return;
 
     }
 
+
+    /* =================================================
+       PEDIDO REGISTRADO CORRECTAMENTE
+    ================================================= */
+
+    console.log(
+      "PEDIDO REGISTRADO:",
+      data
+    );
 
     success.style.display = "block";
 
@@ -1171,13 +1227,24 @@ document
 
   }catch(err){
 
-    console.error(err);
+    console.error(
+      "ERROR GENERAL:",
+      err
+    );
 
     error.style.display = "block";
 
     error.innerHTML =
-      "❌ <strong>No pudimos registrar el pedido.</strong><br>" +
-      "Por favor verifica los datos e intenta nuevamente.";
+      "❌ <strong>No pudimos registrar el pedido.</strong><br><br>" +
+      (err.message || "Ocurrió un error inesperado.") +
+      "<br><br>" +
+      "<small>Abre la consola del navegador si necesitamos revisar más detalles.</small>";
+
+
+    error.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
 
 
   }finally{
