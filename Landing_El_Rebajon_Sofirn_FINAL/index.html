@@ -50,6 +50,10 @@ a{
   padding:0 18px;
 }
 
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
 .top{
   background:linear-gradient(
     90deg,
@@ -64,6 +68,10 @@ a{
   padding:11px 12px;
   font-size:14px;
 }
+
+/* =========================
+   NAVEGACIÓN
+========================= */
 
 nav{
   position:sticky;
@@ -97,6 +105,10 @@ nav{
   border-radius:10px;
   font-weight:900;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   padding:28px 0 44px;
@@ -144,6 +156,10 @@ h1{
   color:#ddd;
 }
 
+/* =========================
+   PRECIO
+========================= */
+
 .pricebox{
   background:#101010;
   border:2px solid var(--orange);
@@ -169,6 +185,10 @@ h1{
   font-weight:900;
   margin-top:7px;
 }
+
+/* =========================
+   BOTONES
+========================= */
 
 .btn{
   display:flex;
@@ -200,6 +220,10 @@ h1{
   cursor:not-allowed;
 }
 
+/* =========================
+   CONFIANZA
+========================= */
+
 .trust{
   display:flex;
   flex-wrap:wrap;
@@ -215,6 +239,10 @@ h1{
   font-size:13px;
   font-weight:800;
 }
+
+/* =========================
+   SECCIONES
+========================= */
 
 .section{
   padding:65px 0;
@@ -233,6 +261,10 @@ h1{
   max-width:700px;
   margin:0 auto 30px;
 }
+
+/* =========================
+   CARACTERÍSTICAS
+========================= */
 
 .features{
   display:grid;
@@ -260,6 +292,10 @@ h1{
   margin:0;
 }
 
+/* =========================
+   GALERÍA
+========================= */
+
 .gallery{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -285,6 +321,10 @@ h1{
   font-size:14px;
 }
 
+/* =========================
+   OFERTA
+========================= */
+
 .offer{
   background:
     linear-gradient(
@@ -302,6 +342,10 @@ h1{
 .offer strong{
   color:var(--orange);
 }
+
+/* =========================
+   CONTADOR
+========================= */
 
 .timer{
   display:flex;
@@ -327,6 +371,10 @@ h1{
 .time small{
   color:#999;
 }
+
+/* =========================
+   FORMULARIO
+========================= */
 
 .formgrid{
   display:grid;
@@ -383,6 +431,10 @@ h1{
   margin-top:12px;
 }
 
+/* =========================
+   MENSAJES
+========================= */
+
 .success{
   display:none;
   background:#123016;
@@ -405,18 +457,23 @@ h1{
   text-align:center;
 }
 
-.error-debug{
+.errorCode{
   display:none;
   margin-top:10px;
-  padding:10px;
+  padding:12px;
+  border-radius:10px;
   background:#210909;
-  border:1px solid #6d2222;
-  border-radius:8px;
+  border:1px solid #6b2020;
+  color:#ffbebe;
   font-family:monospace;
   font-size:12px;
   text-align:left;
-  word-break:break-word;
+  overflow:auto;
 }
+
+/* =========================
+   FAQ
+========================= */
 
 .faq{
   max-width:850px;
@@ -441,6 +498,10 @@ h1{
   margin-bottom:0;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer{
   padding:35px 0 95px;
   background:#050505;
@@ -449,6 +510,10 @@ footer{
   text-align:center;
   font-size:13px;
 }
+
+/* =========================
+   BOTÓN MÓVIL
+========================= */
 
 .bottom{
   display:none;
@@ -465,6 +530,10 @@ footer{
 .bottom .btn{
   padding:13px;
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:800px){
 
@@ -556,6 +625,10 @@ PEDIR AHORA
 
 <main>
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
 <div class="wrap grid">
@@ -627,6 +700,11 @@ $89.900
 </div>
 
 </section>
+
+
+<!-- =========================
+     CARACTERÍSTICAS
+========================= -->
 
 <section class="section">
 
@@ -704,6 +782,11 @@ de iluminación.
 
 </section>
 
+
+<!-- =========================
+     GALERÍA
+========================= -->
+
 <section class="section">
 
 <div class="wrap">
@@ -750,6 +833,11 @@ Presentación Sofirn SD06 y accesorios incluidos.
 </div>
 
 </section>
+
+
+<!-- =========================
+     OFERTA
+========================= -->
 
 <section class="section">
 
@@ -802,6 +890,11 @@ de esta semana.
 
 </section>
 
+
+<!-- =========================
+     FORMULARIO
+========================= -->
+
 <section class="section" id="pedido">
 
 <div class="wrap">
@@ -838,13 +931,17 @@ Hemos recibido tus datos.
 Por favor verifica los datos e intenta nuevamente.
 </span>
 
-<div id="errorDebug" class="error-debug"></div>
+<div id="errorCode" class="errorCode"></div>
 
 </div>
+
 
 <form id="orderForm">
 
 <div class="formgrid">
+
+
+<!-- NOMBRE -->
 
 <div class="field">
 
@@ -861,6 +958,9 @@ Nombre completo *
 >
 
 </div>
+
+
+<!-- TELÉFONO -->
 
 <div class="field">
 
@@ -880,6 +980,9 @@ WhatsApp / celular *
 
 </div>
 
+
+<!-- DEPARTAMENTO -->
+
 <div class="field">
 
 <label for="dept">
@@ -894,6 +997,9 @@ Departamento *
 >
 
 </div>
+
+
+<!-- CIUDAD -->
 
 <div class="field">
 
@@ -911,6 +1017,9 @@ Ciudad *
 
 </div>
 
+
+<!-- DIRECCIÓN -->
+
 <div class="field full">
 
 <label for="address">
@@ -926,6 +1035,9 @@ Dirección de entrega *
 >
 
 </div>
+
+
+<!-- CANTIDAD -->
 
 <div class="field">
 
@@ -951,6 +1063,9 @@ Cantidad *
 
 </div>
 
+
+<!-- MÉTODO DE PAGO -->
+
 <div class="field">
 
 <label for="payment">
@@ -967,6 +1082,7 @@ Método de pago
 
 </div>
 
+
 <button
   id="submitBtn"
   class="btn"
@@ -976,6 +1092,7 @@ Método de pago
 🚚 CONFIRMAR MI PEDIDO
 
 </button>
+
 
 <p class="note">
 
@@ -992,6 +1109,11 @@ y despachar tu pedido.
 </div>
 
 </section>
+
+
+<!-- =========================
+     PAGO CONTRA ENTREGA
+========================= -->
 
 <section class="section">
 
@@ -1029,6 +1151,11 @@ QUIERO HACER MI PEDIDO
 
 </section>
 
+
+<!-- =========================
+     FAQ
+========================= -->
+
 <section class="section">
 
 <div class="wrap">
@@ -1052,6 +1179,7 @@ $89.900, frente a un precio anterior de $129.000.
 
 </details>
 
+
 <details>
 
 <summary>
@@ -1065,6 +1193,7 @@ de la transportadora.
 </p>
 
 </details>
+
 
 <details>
 
@@ -1080,6 +1209,7 @@ al validar la dirección.
 
 </details>
 
+
 <details>
 
 <summary>
@@ -1092,6 +1222,7 @@ registrado directamente para su gestión.
 </p>
 
 </details>
+
 
 <details>
 
@@ -1115,6 +1246,11 @@ hora de Colombia.
 
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <div class="wrap">
@@ -1127,6 +1263,11 @@ Todos los derechos reservados.
 
 </footer>
 
+
+<!-- =========================
+     BOTÓN MÓVIL
+========================= -->
+
 <div class="bottom">
 
 <a class="btn" href="#pedido">
@@ -1135,7 +1276,10 @@ Todos los derechos reservados.
 
 </div>
 
-<!-- SUPABASE -->
+
+<!-- =========================
+     SUPABASE
+========================= -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -1159,7 +1303,7 @@ window.supabase.createClient(
 
 
 /* =====================================================
-   CONFIGURACIÓN
+   CONFIGURACIÓN DEL PRODUCTO
 ===================================================== */
 
 const CONFIG = {
@@ -1215,18 +1359,22 @@ document
       const errorText =
         document.getElementById("errorText");
 
-      const errorDebug =
-        document.getElementById("errorDebug");
+      const errorCode =
+        document.getElementById("errorCode");
 
 
-      /* OCULTAR MENSAJES */
+      /* =========================
+         OCULTAR MENSAJES
+      ========================= */
 
       success.style.display = "none";
       error.style.display = "none";
-      errorDebug.style.display = "none";
+      errorCode.style.display = "none";
 
 
-      /* OBTENER DATOS */
+      /* =========================
+         OBTENER DATOS
+      ========================= */
 
       const name =
         document
@@ -1266,7 +1414,17 @@ document
         );
 
 
-      /* VALIDACIÓN */
+      /* =========================
+         CALCULAR TOTAL
+      ========================= */
+
+      const totalCalculado =
+        CONFIG.PRICE * qty;
+
+
+      /* =========================
+         VALIDACIÓN
+      ========================= */
 
       if(
         !name ||
@@ -1287,32 +1445,9 @@ document
       }
 
 
-      /* VALIDAR CELULAR */
-
-      const phoneClean =
-        phone.replace(/\D/g,"");
-
-      if(
-        phoneClean.length < 10
-      ){
-
-        error.style.display = "block";
-
-        errorText.textContent =
-          "Escribe un número de celular válido.";
-
-        return;
-
-      }
-
-
-      /* TOTAL SOLO PARA MOSTRAR AL CLIENTE */
-
-      const totalCalculado =
-        CONFIG.PRICE * qty;
-
-
-      /* BOTÓN EN PROCESO */
+      /* =========================
+         BOTÓN EN PROCESO
+      ========================= */
 
       button.disabled = true;
 
@@ -1323,13 +1458,15 @@ document
       try{
 
         /* =================================================
-           IMPORTANTE
+           PEDIDO
 
-           NO ENVIAMOS "total".
+           IMPORTANTE:
 
-           Supabase debe calcular automáticamente
-           la columna total porque está definida
-           como GENERATED ALWAYS.
+           NO enviamos "total".
+           NO enviamos "estado".
+
+           Supabase utilizará los valores por defecto
+           configurados en la tabla para esas columnas.
         ================================================= */
 
         const pedido = {
@@ -1338,7 +1475,7 @@ document
             name,
 
           telefono:
-            phoneClean,
+            phone,
 
           departamento:
             dept,
@@ -1359,39 +1496,24 @@ document
             CONFIG.PRICE,
 
           metodo_pago:
-            "Pago contra entrega",
-
-          estado:
-            "Pendiente"
+            "Pago contra entrega"
 
         };
 
 
-        /* MOSTRAR EXACTAMENTE LO QUE ENVIAMOS */
+        /* =========================
+           REGISTRO EN CONSOLA
+        ========================= */
 
         console.log(
-          "================================="
-        );
-
-        console.log(
-          "PEDIDO QUE SE ENVÍA A SUPABASE:"
-        );
-
-        console.log(
+          "PEDIDO QUE SE ENVÍA A SUPABASE:",
           pedido
         );
 
-        console.log(
-          "================================="
-        );
 
-
-        /* =================================================
-           INSERTAR EN SUPABASE
-
-           NO usamos .select()
-           NO enviamos total
-        ================================================= */
+        /* =========================
+           INSERTAR PEDIDO
+        ========================= */
 
         const resultado =
           await supabaseClient
@@ -1403,7 +1525,9 @@ document
           resultado.error;
 
 
-        /* ERROR */
+        /* =========================
+           ERROR DE SUPABASE
+        ========================= */
 
         if(dbError){
 
@@ -1413,12 +1537,12 @@ document
           );
 
           console.error(
-            "MESSAGE:",
+            "MENSAJE:",
             dbError.message
           );
 
           console.error(
-            "DETAILS:",
+            "DETALLE:",
             dbError.details
           );
 
@@ -1427,20 +1551,14 @@ document
             dbError.hint
           );
 
-          console.error(
-            "CODE:",
-            dbError.code
-          );
-
-
           throw dbError;
 
         }
 
 
-        /* =================================================
-           PEDIDO REGISTRADO
-        ================================================= */
+        /* =========================
+           PEDIDO CORRECTO
+        ========================= */
 
         success.style.display =
           "block";
@@ -1454,14 +1572,18 @@ document
           " quedó registrado.";
 
 
-        /* LIMPIAR */
+        /* =========================
+           LIMPIAR FORMULARIO
+        ========================= */
 
         document
           .getElementById("orderForm")
           .reset();
 
 
-        /* SUBIR AL MENSAJE */
+        /* =========================
+           SUBIR AL MENSAJE
+        ========================= */
 
         success.scrollIntoView({
 
@@ -1475,22 +1597,16 @@ document
 
       }
 
+
+      /* =========================
+         CAPTURAR ERROR
+      ========================= */
+
       catch(err){
 
         console.error(
-          "================================="
-        );
-
-        console.error(
-          "ERROR COMPLETO DEL PEDIDO:"
-        );
-
-        console.error(
+          "ERROR COMPLETO:",
           err
-        );
-
-        console.error(
-          "================================="
         );
 
 
@@ -1499,45 +1615,41 @@ document
 
 
         /*
-           MOSTRAMOS EL MENSAJE REAL
-           TEMPORALMENTE PARA PODER
-           DIAGNOSTICAR EL PROBLEMA.
+           El cliente NO verá el error técnico.
+           Solo mostramos un mensaje sencillo.
         */
 
         errorText.textContent =
-          "No pudimos registrar el pedido.";
+          "No pudimos registrar el pedido. " +
+          "Por favor intenta nuevamente.";
 
 
-        const detalle =
-          [
+        /*
+           Guardamos el detalle técnico solamente
+           en la consola del navegador.
+        */
+
+        if(err){
+
+          console.error(
+            "Código:",
             err.code
-              ? "Código: " + err.code
-              : "",
+          );
 
+          console.error(
+            "Mensaje:",
             err.message
-              ? "Mensaje: " + err.message
-              : "",
+          );
 
+          console.error(
+            "Detalle:",
             err.details
-              ? "Detalle: " + err.details
-              : "",
+          );
 
+          console.error(
+            "Hint:",
             err.hint
-              ? "Ayuda: " + err.hint
-              : ""
-
-          ]
-          .filter(Boolean)
-          .join("\n");
-
-
-        if(detalle){
-
-          errorDebug.textContent =
-            detalle;
-
-          errorDebug.style.display =
-            "block";
+          );
 
         }
 
@@ -1555,6 +1667,10 @@ document
       }
 
 
+      /* =========================
+         RESTAURAR BOTÓN
+      ========================= */
+
       finally{
 
         button.disabled =
@@ -1570,7 +1686,7 @@ document
 
 
 /* =====================================================
-   CONTADOR
+   CONTADOR DE PROMOCIÓN
 ===================================================== */
 
 const end =
@@ -1651,6 +1767,7 @@ function tick(){
 
 
 tick();
+
 
 setInterval(
   tick,
