@@ -1018,6 +1018,25 @@ Ciudad *
 </div>
 
 
+<!-- BARRIO -->
+
+<div class="field">
+
+<label for="barrio">
+Barrio *
+</label>
+
+<input
+  id="barrio"
+  name="barrio"
+  required
+  autocomplete="address-line2"
+  placeholder="Ej. El Centro"
+>
+
+</div>
+
+
 <!-- DIRECCIÓN -->
 
 <div class="field full">
@@ -1031,7 +1050,7 @@ Dirección de entrega *
   name="address"
   required
   autocomplete="street-address"
-  placeholder="Calle, carrera, número, barrio, casa/apto"
+  placeholder="Calle, carrera, número, casa/apto"
 >
 
 </div>
@@ -1400,6 +1419,12 @@ document
           .value
           .trim();
 
+      const barrio =
+        document
+          .getElementById("barrio")
+          .value
+          .trim();
+
       const address =
         document
           .getElementById("address")
@@ -1431,6 +1456,7 @@ document
         !phone ||
         !dept ||
         !city ||
+        !barrio ||
         !address ||
         !qty
       ){
@@ -1482,6 +1508,9 @@ document
 
           ciudad:
             city,
+
+          barrio:
+            barrio,
 
           direccion:
             address,
